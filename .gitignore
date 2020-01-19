@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+/.gitignore
+/springNativeDemo.iml
+out
+.idea/inspectionProfiles/
+.idea/vcs.xml
+src/main/java/com/ccc/XMLConfigBean/
+web/WEB-INF/classes/main/java/com/ccc/javaConfigBean/soundsystem/config/CompactDiscConfig.class
+web/WEB-INF/classes/main/java/com/ccc/javaConfigBean/soundsystem/pojo/BlankDisc.class
+web/WEB-INF/classes/main/java/com/ccc/javaConfigBean/soundsystem/test/CDPlayerTest1.class
+web/WEB-INF/classes/main/java/com/ccc/javaConfigBean/soundsystem/test/CDPlayerTest2.class
+web/WEB-INF/classes/main/resources/
+/src/main/java/com/ccc/javaConfigBean/soundsystem/test/
+/src/main/resources/springComponent.xml

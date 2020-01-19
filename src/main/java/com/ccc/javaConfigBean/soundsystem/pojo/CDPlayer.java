@@ -1,6 +1,7 @@
 package main.java.com.ccc.javaConfigBean.soundsystem.pojo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
@@ -14,8 +15,13 @@ public class CDPlayer implements MediaPlayer {
 
     private CompactDisc sgtPeppers;
 
-    @Autowired(required = false)
-    public CDPlayer(CompactDisc sgtPeppers){
+//    @Autowired(required = false)
+//    public CDPlayer(CompactDisc sgtPeppers){
+//        this.sgtPeppers = sgtPeppers;
+//    }
+
+    @Autowired
+    public void setSgtPeppers(@Qualifier("BlankDisc") CompactDisc sgtPeppers) {
         this.sgtPeppers = sgtPeppers;
     }
 
