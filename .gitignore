@@ -1,5 +1,4 @@
 # Created by .ignore support plugin (hsz.mobi)
-/.gitignore
 /springNativeDemo.iml
 out
 .idea/inspectionProfiles/
@@ -12,3 +11,4 @@ web/WEB-INF/classes/main/java/com/ccc/javaConfigBean/soundsystem/test/CDPlayerTe
 web/WEB-INF/classes/main/resources/
 /src/main/java/com/ccc/javaConfigBean/soundsystem/test/
 /src/main/resources/springComponent.xml
+/.idea/workspace.xml
