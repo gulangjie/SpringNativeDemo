@@ -5,12 +5,17 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xmlns:util="http://www.springframework.org/schema/util"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-4.3.xsd
         http://www.springframework.org/schema/util
-        http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+        http://www.springframework.org/schema/util/spring-util-4.3.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-ao.p-4.3.xsd">
+
+    <context:property-placeholder />
 
     <!--<context:component-scan base-package="main.java.com.ccc.javaConfigBean.soundsystem"/>-->
     <bean class="main.java.com.ccc.javaConfigBean.soundsystem.config.BlankDiscConfig"/>
@@ -23,8 +28,8 @@
         <value>Fixing a Hole</value>
     </util:list>
 
-    <bean id="CompactDisc" class="main.java.com.ccc.javaConfigBean.soundsystem.pojo.SgtPeppers">
-
+    <bean id="CompactDisc" class="main.java.com.ccc.javaConfigBean.soundsystem.pojo.SgtPeppers" primary="true" scope="session" >
+        <aop:scoped-proxy proxy-target-class="false" />
     </bean>
 
     <!--<bean id="CDPlayer" class="main.java.com.ccc.javaConfigBean.soundsystem.pojo.CDPlayer">-->
@@ -43,8 +48,8 @@
 
     <!--构造器注入 c命名-->
     <bean id="BlankDisc" class="main.java.com.ccc.javaConfigBean.soundsystem.pojo.BlankDisc"
-        c:title="Sgt. Pepper's Lonely hearts Club Band"
-        c:artist="The Beatles">
+        c:title="${disc.title}"
+        c:artist="${disc.artist}" primary="true">
         <constructor-arg ref="trackList"></constructor-arg>
 
         <!--<constructor-arg value="Sgt. Pepper's Lonely hearts Club Band"></constructor-arg>-->

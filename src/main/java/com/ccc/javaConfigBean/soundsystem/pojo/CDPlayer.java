@@ -15,15 +15,15 @@ public class CDPlayer implements MediaPlayer {
 
     private CompactDisc sgtPeppers;
 
-//    @Autowired(required = false)
-//    public CDPlayer(CompactDisc sgtPeppers){
-//        this.sgtPeppers = sgtPeppers;
-//    }
-
-    @Autowired
-    public void setSgtPeppers(@Qualifier("BlankDisc") CompactDisc sgtPeppers) {
+    @Autowired(required = false)
+    public CDPlayer(CompactDisc sgtPeppers){
         this.sgtPeppers = sgtPeppers;
     }
+
+//    @Autowired
+//    public void setSgtPeppers(@Qualifier("BlankDisc") CompactDisc sgtPeppers) {
+//        this.sgtPeppers = sgtPeppers;
+//    }
 
     @Override
     public void play() {
